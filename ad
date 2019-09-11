@@ -1,0 +1,17 @@
+[33mcommit 60de77c5eb5ee1338c3387b16af797218a4ce836[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Lucas Santos <lucas.nepomuceno1999@gmail.com>
+Date:   Wed Sep 11 20:29:28 2019 -0300
+
+    Configuração de certficado do site no aplicativo
+
+[33mcommit ff975ee9413703f16756a2a644cd6f23240a3659[m
+Author: Lucas Santos <lucas.nepomuceno1999@gmail.com>
+Date:   Wed Sep 11 20:20:48 2019 -0300
+
+    Configurado o intent de manipulação do host
+
+[33mcommit db3717687fd4c5f20d1ffdd47ec09ff83fec1ede[m
+Author: Lucas Santos <lucas.nepomuceno1999@gmail.com>
+Date:   Wed Sep 11 20:03:21 2019 -0300
+
+    Iniciando o projeto
