@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">TWAConfig</string>
+    <string name="setting_certified">
+        [{
+            \"relation\": [\"delegate_permission/common.handle_all_urls\"],
+            \"target\": {
+                \"namespace\": \"web\",
+                \"site\": \"https://webapp.smartfield.homolog.solvian.com\"}
+        }]
+    </string>
 </resources>

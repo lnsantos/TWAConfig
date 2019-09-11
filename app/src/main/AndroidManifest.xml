@@ -10,12 +10,18 @@
         android:theme="@style/AppTheme"
         xmlns:tools="http://schemas.android.com/tools">
 
+        <!-- Atribuindo o site dentro do app, configuração de autenticação ( CERTIFICADO )-->
+        <meta-data
+            android:name="asset_statements"
+            android:resource="@string/setting_certified" />
+
+
         <activity
             android:name="android.support.customtabs.trusted.LauncherActivity">
 
             <!-- Valor que o TWA vai abrir o PWA -->
             <meta-data android:name="android.support.customtabs.trusted.DEFAULT_URL"
-                android:value="${openURL}"/>
+                android:value="https://webapp.smartfield.homolog.solvian.com"/>
 
             <!-- Adiciona o TWA no laucher do android -->
             <intent-filter>
@@ -30,10 +36,10 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <!-- Sem o http na string, A tag meta informa à atividade da TWA qual URL ela deve abrir-->
-                <!-- O android:host atributo dentro da datatag deve apontar para o domínio que está sendo aberto pela TWA. -->
+                <!-- O android:host giatributo dentro da datatag deve apontar para o domínio que está sendo aberto pela TWA. -->
                 <data
                     android:scheme="https"
-                    android:host="${openURL_Domain}"/>
+                    android:host="webapp.smartfield.homolog.solvian.com"/>
 
             </intent-filter>
 
