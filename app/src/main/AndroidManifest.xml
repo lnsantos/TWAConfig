@@ -7,5 +7,37 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" />
+        android:theme="@style/AppTheme"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <activity
+            android:name="android.support.customtabs.trusted.LauncherActivity">
+
+            <!-- Valor que o TWA vai abrir o PWA -->
+            <meta-data android:name="android.support.customtabs.trusted.DEFAULT_URL"
+                android:value="${openURL}"/>
+
+            <!-- Adiciona o TWA no laucher do android -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Manipula o TWA para abrir o PWA -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Sem o http na string, A tag meta informa à atividade da TWA qual URL ela deve abrir-->
+                <!-- O android:host atributo dentro da datatag deve apontar para o domínio que está sendo aberto pela TWA. -->
+                <data
+                    android:scheme="https"
+                    android:host="${openURL_Domain}"/>
+
+            </intent-filter>
+
+        </activity>
+
+    </application>
 </manifest>
