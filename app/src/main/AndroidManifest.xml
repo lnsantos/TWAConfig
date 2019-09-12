@@ -24,6 +24,15 @@
             <meta-data android:name="android.support.customtabs.trusted.DEFAULT_URL"
                 android:value="https://webapp.smartfield.homolog.solvian.com"/>
 
+            <!-- <meta-data android:name="android.support.customtabs.trusted.SPLASH_IMAGE_DRAWABLE"
+                android:resource="@drawable/ic_launcher_background"/> -->
+            <meta-data android:name="android.support.customtabs.trusted.SPLASH_SCREEN_BACKGROUND_COLOR"
+                android:resource="@color/colorPrimary"/>
+            <meta-data android:name="android.support.customtabs.trusted.SPLASH_SCREEN_FADE_OUT_DURATION"
+                android:value="100"/>
+            <meta-data android:name="android.support.customtabs.trusted.FILE_PROVIDER_AUTHORITY"
+                android:value="com.lnsantos.twaconfig.fileprovider"/>
+
             <!-- Adiciona o TWA no laucher do android -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,15 +57,15 @@
         <!-- Provedor de conteúdo, manipula elementos graficos-->
         <!-- Adiciona splash screen caso queira...-->
         <provider
-            android:authorities="com.solvian.smartfieldtwa"
-            android:name="android.content.SearchRecentSuggestionsProvider"
+            android:authorities="com.lnsantos.twaconfig.fileprovider"
+            android:name="android.support.customtabs.browseractions.BrowserServiceFileProvider"
             android:grantUriPermissions="true"
             android:exported="false">
             <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS" />
-
-
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" /> -->
         </provider>
+
 
     </application>
 </manifest>
